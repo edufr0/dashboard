@@ -251,7 +251,7 @@ body::before{
     text-align: center;
 }
 
-.rigth .span.message{
+.right .span.message{
     background-color: var(--red);
 }
 
@@ -559,4 +559,34 @@ body::before{
 .footerContent .credits a {
     text-decoration: none;
     color: var(--purple);
+}
+
+@media (max-width: 991px) {
+    .cardBox {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .search {
+        width: 100%;
+        margin: 10px 0;
+    }
+
+    .main {
+        left: 80px;
+        width: calc(100% - 80px);
+    }
+
+    .sidebar.active {
+        width: 250px;
+    }
+}
+
+@media (max-width: 600px) {
+    .cardBox {
+        grid-template-columns: 1fr;
+    }
+
+    .details {
+        grid-template-columns: 1fr;
+    }
 }
