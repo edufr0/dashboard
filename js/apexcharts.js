@@ -1,4 +1,4 @@
-document.addEventListener{'DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', () => {
     new ApexCharts(document.querySelector("#reportsChart"), {
         series: [
             {
@@ -60,4 +60,4 @@ document.addEventListener{'DOMContentLoaded', () => {
             },
         },
     }).render();
-}};
+});
