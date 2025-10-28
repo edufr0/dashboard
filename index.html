@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="/css/style.css">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+        <title>Admin Dashboard</title>
+    </head>
+
+    <body>
+        <div class="container">
+            <!-- Side bar -->
+            <div class="sidebar">
+                <ul>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-rocket-takeoff"></i></span>
+                            <span class="title">Dashboard</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-people"></i></span>
+                            <span class="title">Clientes</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-person"></i></span>
+                            <span class="title">Perfil</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-question-circle"></i></span>
+                            <span class="title">Ajuda</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-gear"></i></span>
+                            <span class="title">Configurações</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-headset"></i></span>
+                            <span class="title">Suporte</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-card-list"></i></span>
+                            <span class="title">Documentos</span>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="#">
+                            <span class="icon"><i class="bi bi-box-arrow-left"></i></span>
+                            <span class="title">Logout</span>
+                        </a>
+                    </li>
+            </div>
+            <!-- Main Content -->
+            <div class="main">            
+                <!-- Top bar -->
+                <div class="topbar">
+                    <div class="left">
+                        <div class="toggle">
+                            <i class="bi bi-list"></i>
+                        </div>
+                        <div class="search">
+                            <label>
+                                <input type="text" placeholder="Pesquisar aqui"/>
+                                <i class="bi bi-search"></i>
+                            </label>
+                        </div>
+                    </div>
+                    <div class="right">
+                        <a href="#">
+                            <i class="bi bi-bell"></i>
+                            <span class="badgge">3</span>
+                        </a>
+                        <a href="#">
+                            <i class="bi bi-chat-left-dots"></i>
+                            <span class="badgge message">4</span>
+                        </a>
+                        <div class="user">
+                            <img src="./images/Eduardo-Social.jpg" alt="Foto do Usuário">
+                        </div>
+                    </div>
+                </div>
+                <!-- Cards -->
+                <div class="cardBox">
+                <div class="card">
+                    <div>
+                    <div class="numbers">103</div>
+                    <div class="cardName">Vendas</div>
+                    </div>
+                    <div class="iconBox"><i class="bi bi-cart"></i></div>
+                </div>
+
+                <div class="card">
+                    <div>
+                    <div class="numbers">210</div>
+                    <div class="cardName">Clientes</div>
+                    </div>
+                    <div class="iconBox"><i class="bi bi-people"></i></div>
+                </div>
+
+                <div class="card">
+                    <div>
+                    <div class="numbers">R$ 1500</div>
+                    <div class="cardName">Receita</div>
+                    </div>
+                    <div class="iconBox"><i class="bi bi-currency-dollar"></i></div>
+                </div>
+
+                <div class="card">
+                    <div>
+                    <div class="numbers">10</div>
+                    <div class="cardName">Reclamações</div>
+                    </div>
+                    <div class="iconBox"><i class="bi bi-exclamation-circle"></i></div>
+                </div>
+                </div>
+                <!-- GraphsBox -->
+                <div class="graphBox">
+                    <div class="box">
+                        <div id="reportsChart"></div>
+                    </div>
+                    <div class="box">
+                        <div id="budgetChart" style="min-height: 400px;" class="echart"></div>
+                    </div>
+                    <div class="box">
+                        <div id="trafficChart" style="min-height: 400px;" class="echart"></div>
+                    </div>
+                </div>
+                <div class="details">
+                    <!--Vendas Recentes-->
+                    <div class="vendasRecentes">
+                        <div class="cardHeader">
+                            <h2>Vendas Recentes</h2>
+                            <a href="#" class="btn">Ver Tudo</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>#</th>
+                                    <td>Cliente</td>
+                                    <td>Produto</td>
+                                    <td>Preço</td>
+                                    <td>Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <th>#2050</th>
+                                    <td>André Marques</td>
+                                    <td>Moletom</td>
+                                    <td>R$220</td>
+                                    <td><span class="status entregue">Entregue</span></td>
+                                </tr>
+                                <tr>
+                                    <th>#2243</th>
+                                    <td>José Maria</td>
+                                    <td>Short</td>
+                                    <td>R$65</td>
+                                    <td><span class="status pendente">Pendente</span></td>
+                                </tr>
+                                <tr>
+                                    <th>#2695</th>
+                                    <td>Maria Santos</td>
+                                    <td>Saia</td>
+                                    <td>R$165</td>
+                                    <td><span class="status retorno">Retorno</span></td>
+                                </tr>
+                                <tr>
+                                    <th>#3201</th>
+                                    <td>Jaime Junior</td>
+                                    <td>Sapato</td>
+                                    <td>R$365</td>
+                                    <td><span class="status emAndamento">Em Andamento</span></td>
+                                </tr>
+                                <tr>
+                                    <th>#3201</th>
+                                    <td>Francisco Junior</td>
+                                    <td>Sapato</td>
+                                    <td>R$365</td>
+                                    <td><span class="status entregue">Entregue</span></td>
+                                </tr>
+
+                            </tbody>
+                        </table>
+                    </div>
+                    <!--Mais Vendido-->
+                    <div class="maisVendido">
+                        <div class="cardHeader">
+                            <h2>Produtos Mais Vendidos</h2>
+                            <a href="#" class="btn">Ver Tudo</a>
+                        </div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <td>Foto</td>
+                                    <td>Produto</td>
+                                    <td>Preço</td>
+                                    <td>Vendidos</td>
+                                    <td>Receita Total</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><div class="imgbx"><img src="./images/camisa-polo.png" alt="Camisa Polo"></div></td>
+                                    <td>Camisa Polo</td>
+                                    <td>R$120</td>
+                                    <td>80</td>
+                                    <td>R$9.600</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="imgbx"><img src="./images/calca-jeans.png" alt="Calça Jeans"></div></td>
+                                    <td>Calça Jeans</td>
+                                    <td>R$200</td>
+                                    <td>60</td>
+                                    <td>R$12.000</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="imgbx"><img src="./images/tenis-esportivo.jpg" alt="Tênis Esportivo"></div></td>
+                                    <td>Tênis Esportivo</td>
+                                    <td>R$300</td>
+                                    <td>150</td>
+                                    <td>R$45.000</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="imgbx"><img src="./images/jaqueta-couro.png" alt="Jaqueta de Couro"></div></td>
+                                    <td>Jaqueta de Couro</td>
+                                    <td>R$450</td>
+                                    <td>40</td>
+                                    <td>R$18.000</td>
+                                </tr>
+                                <tr>
+                                    <td><div class="imgbx"><img src="./images/relogio-pulso.png" alt="Relógio de Pulso"></div></td>
+                                    <td>Relógio de Pulso</td>
+                                    <td>R$250</td>
+                                    <td>70</td>
+                                    <td>R$17.500</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <footer>
+                    <div class="footerContent">
+                        <div class="copyright">
+                            &copy; Copyright <strong><span>Eduardo Rodrigues</span></strong> 2025 - Todos os direitos reservados.
+                        </div>
+                        <div class="credits">
+                            Desenvolvido por <a href="https://edufr0.github.io/">Eduardo Rodrigues</a>
+                    </div>
+                </footer>
+            </div>
+        </div> 
+
+        <!-- JavaScript links Fornecedores (CDN)-->
+        <script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/echarts/6.0.0/echarts.min.js" 
+        integrity="sha512-4/g9GAdOdTpUP2mKClpKsEzaK7FQNgMjq+No0rX8XZlfrCGtbi4r+T/p5fnacsEC3zIAmHKLJUL7sh3/yVA4OQ==" 
+        crossorigin="anonymous" 
+        referrerpolicy="no-referrer"></script>
+
+        <!-- Customização de JavaScript-->
+        <script src="./js/apexcharts.js"></script>
+        <script src="./js/echart.js"></script>
+        <script src="./js/script.js"></script>
+    </body>
+</html>
