@@ -1,15 +1,15 @@
-// Budget Report
-
 document.addEventListener('DOMContentLoaded', () => {
-    var budgetChart = echarts.init(document.querySelector("#budgetChart")).setOption({
+
+    // === Budget Report (Radar Chart) ===
+    const budgetChart = echarts.init(document.querySelector("#budgetChart"));
+    budgetChart.setOption({
         legend: {
             data: ['Receitas', 'Despesas'],
-            textstyle: {
-                color: '#fffffff',
+            textStyle: {
+                color: '#ffffff',
             },
         },
         radar: {
-            /* shape: 'circle', */
             indicator: [
                 { name: 'Alimentação', max: 6500 },
                 { name: 'Vendas', max: 16000 },
@@ -31,25 +31,23 @@ document.addEventListener('DOMContentLoaded', () => {
                     {
                         value: [5000, 14000, 28000, 31000, 42000, 21000],
                         name: 'Despesas'
-                    },
-                ],
+                    }
+                ]
             }
-        ],
-    }),
-});
+        ]
+    });
 
-// Website Traffic
-
-document.addEventListener('DOMContentLoaded', () => {
-    echarts.init(document.querySelector("#trafficChart")).setOption({
+    // === Website Traffic (Pie Chart) ===
+    const trafficChart = echarts.init(document.querySelector("#trafficChart"));
+    trafficChart.setOption({
         tooltip: {
             trigger: 'item'
         },
         legend: {
             top: '5%',
             left: 'center',
-            textstyle: {
-                color: '#fffffff',
+            textStyle: {
+                color: '#ffffff',
             },
         },
         series: [
@@ -65,7 +63,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 emphasis: {
                     label: {
                         show: true,
-                        fontSize: '18',
+                        fontSize: 18,
                         fontWeight: 'bold'
                     }
                 },
@@ -80,6 +78,13 @@ document.addEventListener('DOMContentLoaded', () => {
                     { value: 300, name: 'Outros' }
                 ]
             }
-        ],
+        ]
     });
+
+    window.addEventListener('resize', () => {
+    budgetChart.resize();
+    trafficChart.resize();
+    });
+
+
 });
